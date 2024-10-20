@@ -1,4 +1,4 @@
-{% extends templates/layout.html %}
+{% extends layout.html %}
 
 {% block title %}{{ $title }}{% endblock %}
 
@@ -10,4 +10,12 @@
     <li>{{ $color }}</li>
     {% endforeach; %}
 </ul>
+{% endblock %}
+
+
+<!-- Extending content -->
+{% block content %}
+@parent
+<p>Extends content block!</p>
+{% include forms.html %}
 {% endblock %}
